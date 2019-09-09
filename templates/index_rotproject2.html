@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <title>Capture - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.timepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icomoon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+  <body>
+
+	<div id="colorlib-page" style="--couleur_fond: {{couleur}}; --couleur_logo: {{couleur_logo}}; --couleur_before: {{couleur_before}}; ">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" style="--couleur_fond: {{couleur}}; --couleur_logo: {{couleur_logo}}; --couleur_before: {{couleur_before}};"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo"><a href="index.html"><span class="flaticon-camera"></span>Capture</a></h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li class="colorlib-active"><a href="/index/">photos personelles</a></li>
+					<li><a href="/index_recommand/?ind_page=1">similarité</a></li>
+					<li><a href="/index_translat/?ind_page=1">transfert style</a></li>
+					<li><a href="/index_rotproject/?ind_page=1">détection d'angle</a></li>
+					<li><a href="/index_rotproject2/?ind_page=2">reconstruction</a></li>
+					<li><a href="/index_api">API détection</a></li>
+					<li><a href="/contact">contact</a></li>
+
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+
+				<div class="d-flex justify-content-center">
+					<ul class="d-flex align-items-center">
+
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="/contact"><i class="icon-github"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="/contact"><i class="icon-phone"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="/contact"><i class="icon-linkedin"></i></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<section class="ftco-section bg-light ftco-bread">
+				<div class="container">
+					<div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-9 ftco-animate">
+	            <p class="breadcrumbs"><span class="mr-2"><a href="/index/">Gallerie perso</a></span>
+
+					<span class="mr-2"><a href="/index_rotproject/?ind_page=1">détection d'angle</a></span>
+					<span class="mr-2"><a href="/translat/?perso=zoom_input&perso2=zoom_output&orig=zoom">résultats 1/2 </a></span>
+					<span>reconstitution</span>
+
+
+					<span class="mr-2"><a href="/translat/?perso=recon_input&perso2=recon_output&orig=rotation">résultats 2/2</a></span>
+                    <span class="mr-2"><a href="/cycle_gan/">cycle-GAN</a></span>
+                    <span class="mr-2"><a href="/cycle_gan/">github</a></span>
+                    </p>
+	            <h1 class="mb-3 bread">Reconstitution d'images inclinées </h1>
+				  <p>Nous détaillons les deux algorithmes répondant aux deux objectifs complémentaires de</p> <p> - détecter automatiquement l'angle d'inclinaison des éléments contenus dans une image
+			  </p> <p> - reconstituer les éléments manquants en bordure de l'image. {{text_title}} </p>
+				</p>
+	          </div>
+	        </div>
+				</div>
+			</section>
+
+			<section class="ftco-section">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-lg-8">
+	    				<div class="row new_class">
+
+							{{text}}
+
+			    		</div><!-- END-->
+
+			    	</div>
+
+					<div class="col-lg-4 sidebar ftco-animate bg-light">
+                        <div class="sidebar-box subs-wrap img" style="background-image: url(images/bg_1.jpg);">
+									<div class="overlay"></div>
+								<h3 class=" sidebar-heading "> Détections d'angles </h3>
+								<p><a class="new_class2" href="/index_rotproject/?ind_page=1" target="_self">détail de l'algorithme</a>
+							    <p><a class="new_class2" href="/translat/?perso=zoom_input&perso2=zoom_output&orig=zoom" target="_blank">résultats</a>
+
+								<h3 class=" sidebar-heading ">Reconstruction d'images</h3>
+								<p ><a class="new_class2" href="/index_rotproject2/?ind_page=2" target="_self">détail de l'algorithme</a>
+							    <p ><a class="new_class2" href="/translat/?perso=recon_input&perso2=recon_output&orig=rotation" target="_blank">résultats</a>
+
+
+
+
+
+                                     <div class="row mt-5">
+			          <div class="col text-center">
+			            <div class="block-27">
+			              <ul>
+
+                              <li class="{{A}}"><a href="/index_rotproject/?ind_page=1">1</a></li>
+			                <li class="{{B}}"><a href="/index_rotproject2/?ind_page=2">2</a></li>
+
+
+			              </ul>
+			            </div>
+			          </div>
+			        </div>
+
+                                   </div>
+
+
+
+					</div>
+
+				</div>
+	    	</div>
+	    </section>
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+
+
+	      <div class="container px-md-5">
+
+
+
+          <br/>
+          <br/>
+
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4 ml-md-4">
+	              <h2 class="ftco-heading-2">Categorie</h2>
+	              <ul class="list-unstyled categories">
+	                <li><a href="/index">Photos personelles <span>(6)</span></a></li>
+	                <li><a href="#">Machine learning <span>(8)</span></a></li>
+	                <li><a href="#">Réflexions <span>(2)</span></a></li>
+	                <li><a href="#">Travel <span>(2)</span></a></li>
+	              </ul>
+	            </div>
+	          </div>
+	          <div class="col-md">
+	             <div class="ftco-footer-widget mb-4">
+	              <h2 class="ftco-heading-2">Archives</h2>
+	              <ul class="list-unstyled categories">
+	              	<li><a href="/index">aout 2019 <span>(900)</span></a></li>
+
+	              </ul>
+	            </div>
+	          </div>
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4">
+	            	<h2 class="ftco-heading-2">Nous joindre ?</h2>
+	            	<div class="block-23 mb-3">
+		              <ul>
+		                <li><span class="icon icon-map-marker"></span><span class="text">Bordeaux, FRANCE</span></li>
+		                <li><a href="/contact"><span class="icon icon-phone"></span><span class="text">+33 6 30 48 02 13</span></a></li>
+		                <li><a href="/contact"><span class="icon icon-envelope"></span><span class="text">antoine.b330@gmail.com</span></a></li>
+		              </ul>
+		            </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-12">
+
+	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | The original template was made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+	      </div>
+	    </footer>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+
+    <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/popper.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/bootstrap.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/aos.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/scrollax.min.js') }}"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/google-map.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+   <script type=text/javascript src="{{
+  url_for('static', filename='js/main.js') }}"></script>
+
+
+  </body>
+
+
+
+
+</html>
+
+
+
